@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avanzo Solutions</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="font-poppins">
+  <header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4  flex justify-between items-center">
+    <!-- Logo -->
+    <img class="w-24" src="assets/images/logo.png" alt="Logo">
+    
+    <div class="max-md:hidden space-x-8">
+      <a class="text-lg font-semibold hover:text-blue-700" href="#">Home</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="about.html">About</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="services.html">Services</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="contact.html">Contact</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="login.html">Login</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+    <!-- Desktop Navigation -->
+    <!-- <nav class="hidden md:flex space-x-8">
+      <a class="text-lg font-semibold hover:text-blue-700" href="#">Home</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="about.html">About</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="services.html">Services</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="contact.html">Contact</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="login.html">Login</a>
+      <a class="text-lg font-semibold hover:text-blue-700" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </nav> -->
+
+    <div class="pl-28 md:hidden ">
+      <a class="text-lg font-semibold md:hidden  hover:text-blue-700" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden  focus:outline-none">  
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+    <a href="#" class="block py-2 hover:text-blue-600">Home</a>
+    <a href="about.html" class="block py-2 hover:text-blue-600">About</a>
+    <a href="services.html" class="block py-2 hover:text-blue-600">Services</a>
+    <a href="contact.html" class="block py-2 hover:text-blue-600">Contact</a>
+    <a href="login.html" class="block py-2 hover:text-blue-600">Login</a>
+  </div>
+</header>
+
+<script>
+  // Toggle mobile menu
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+  <!-- Hero -->
+  <div class="w-full h-web flex flex-col items-center md:justify-center pt-36 md:pt-0 relative bg-gray-50">
+    <h1 class=" font-extrabold text-black italic font-poppins text-center z-20 hero-heading">WE SECURE YOU FROM <br> <span style="color: #144f6d;">CYBER THREATS</span></h1>
+    <p class="md:text-xl  text-[1rem] mb-6 z-20">Protect your organisation from cyber attacks</p>
+    <a href="consultation.html" class="px-4 py-2 font-semibold text-lg text-white z-20" style="background-color: #144f6d;">Get Consultation</a>
+    <img class="absolute top-0 left-0 z-10 w-full h-web" src="assets/images/page-1.png" alt="">
+  </div>
+
+
+  <div class="relative text-white py-16 px-6 sm:px-12 lg:px-20 overflow-hidden" style="background-color: #1a4c8a;">
+    <!-- Title Section -->
+    <div class="mb-12">
+      <h2 class="text-white text-4xl md:text-5xl font-bold mb-3 font-raleway text-left">OUR PRODUCTS</h2>
+      <p class="text-white font-light text-xl md:text-2xl lg:text-4xl font-raleway text-left">
+        Secure Your Business With Our Range Of <br> Products
+      </p>
+    </div>
+
+
+    <!-- Slider Section -->
+    <div class="swiper mySwiper relative w-full">
+      <!-- Slides Wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Product 1 -->
+        <div class="swiper-slide h-full">
+          <div class="flex flex-col lg:flex-row items-center lg:items-start h-full">
+            <!-- Left: Positioned Image -->
+            <div class="relative w-full lg:w-1/2 h-auto">
+              <img src="assets/images/Software_Box.png" alt="CyberSol Box"
+                class="w-full max-w-[100%]  lg:max-w-none h-auto mx-auto lg:mx-0" />
+            </div>
+            <!-- Right: Product Description -->
+            <div class="relative flex flex-col items-center lg:w-1/2 text-left space-y-6 z-20 px-6 lg:px-16">
+              <a href="cybersol.html" target="_blank">
+                <img src="assets/images/product.png" alt="CyberSol Logo" class="w-[100%] md:w-[450px] mb-4">
+              </a>
+              <p class="text-sm md:text-lg text-white text-center lg:text-left w-full max-w-[450px] font-raleway z-10">
+                CyberSol was designed as a comprehensive cybersecurity solution to address modern organizations' evolving threats. Developed through in-depth analysis, it helps protect sensitive data, ensure compliance, maintain operations, and safeguard reputation amid rising cyberattacks.<br><br><br>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="swiper-slide h-full">
+          <div class="flex flex-col lg:flex-row items-center lg:items-start h-full">
+            <!-- Left: Positioned Image -->
+            <div class="relative w-full lg:w-1/2 h-auto">
+              <img src="assets/images/Hulk Page-01.png" alt="CyberHulk Box"
+                class="w-full max-w-[100%] lg:max-w-none h-auto mx-auto lg:mx-0" />
+            </div>
+            <!-- Right: Product Description -->
+            <div class="relative flex flex-col items-center lg:w-1/2 text-left space-y-6 z-20 px-6 lg:px-16">
+              <a href="cyberhulk.html" target="_blank">
+                <img src="assets/images/Cyber Hulk Logo with Box.png" alt="CyberHulk Logo"
+                  class="w-[100%] md:w-[450px] mb-4">
+              </a>
+              <p class="text-sm md:text-lg text-white text-center lg:text-left w-full max-w-[450px] font-raleway z-10">
+                Cyber Hulk is a free, user-friendly app that simplifies cybersecurity by providing clear answers to your security questions. Whether you're a beginner or an expert, it offers up-to-date insights on threats like malware, phishing, and ransomware. The app features real-time threat alerts, interactive tools like a password strength checker and network scanner, and educational content, including guides and news updates. With Cyber Hulk, staying informed and improving your digital security has never been easier.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swiper Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper Styling -->
+    <style>
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </div>
+
+  <!-- SwiperJS Integration -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+
+
+  <!-- About -->
+  <div id class="w-full px-12 pt-10 pb-8 md:pb-60 relative ">
+    <div class="md:text-left text-center mb-8">
+      <h2 class=" text-2xl md:text-5xl md:text-left text-blue-700 font-bold mb-2 max-md:text-center ">ABOUT US</h2>
+      <p class=" md:text-2xl text-[1rem] md:w-[950px]  mb-12 break-words leading-relaxed text-justify bold">
+        We have a habit of delivering <br class="max-md:hidden" > transformative outcomes for <br class="max-md:hidden"> businesses like yours. <br class="max-md:hidden"> Our success
+        stories speak for themselves.
+      </p>
+    </div>
+    <div class="w-full flex flex-col items-center justify-center text-center">
+      <p class="md:text-2xl text-[1rem] max-md:text-[1rem] md:w-[950px]  mb-12 break-words leading-relaxed text-justify">
+        We are in a rapid digital transformation phase where everyone – 'Grocer to Tailor to Hair stylist to MSMEs' and Corporates – all shifting to the digital platform. <br class="md:hidden"> Every business now is going to be governed by data. Hence, in this "Data Driven Economy", "Data Security" is of paramount importance to any organization irrespective of its size.
+      </p>
+      
+      
+      <p class="md:text-2xl text-[1rem] md:w-[950px]  mb-12 break-words leading-relaxed text-justify">
+        In today's digital data driven economy, when brands are moulded with process automation, 'Data protection'
+        is of paramount importance. Avanzo now offers consultancy in Formulating security policies for corporates,
+        Intellectual property rights (IPR) in cyberspace, Cyber forensics, Cyber Legal Audit & IS Audit for
+        organi-zations and Security Audit as per ISO standards. Cyber investigation for govern-ments and Case
+        presentation in front of adjudication officers (India, Arbitration).
+      </p>
+    </div>
+    <img class="md:absolute w-[0px]  top-0 left-0 -z-10 md:w-full h-full  " src="assets/images/page-3.png" alt="">
+  </div>
+
+  <div class="md:hidden " style="background-color: #1a4c8a; width: 100%;">
+    <div class="flex flex-col items-center">
+      <img src="assets/images/testimonial2.png" alt="">
+      <p class="text-white px-10 pb-9"><i class="fa-solid fa-quote-left"></i><br>We are in a rapid digital transformation phase <br> where everyone - 'Grocer to Tailor to Hair stylist <br> to
+        MSCEs and Corporates - All shifting to the <br> Digital platform.</p>
+      <hr class="w-1/2 text-white ">
+      <p class="text-center pt-3 font-poppins italic text-white">Pattathil Dhanya Menon </p>
+      <p class="font-medium text-white">Founder</p>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+      <img src="assets/images/testimonial1.png" alt="">
+      <p class="text-white px-10 pb-9"><i class="fa-solid fa-quote-left"></i><br>We are in a rapid digital transformation phase <br> where everyone - 'Grocer to Tailor to Hair stylist <br> to
+        MSCEs and Corporates - All shifting to the <br> Digital platform.</p>
+      <hr class="w-1/2 text-white ">
+      <p class="text-center pt-3 font-poppins italic text-white">Ajith Kumar Parakkat</p>
+      <p class="font-medium text-white">CEO</p>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="w-full h-[1300px] px-12 relative max-md:hidden">
+    <p class="text-white text-3xl absolute top-[220px] left-[435px] max-md:hidden">
+      We are in a rapid digital transformation phase <br> where everyone - 'Grocer to Tailor to Hair stylist <br> to
+      MSCEs and Corporates - All shifting to the <br> Digital platform.
+    </p>
+    <p class="text-white text-3xl absolute bottom-[350px] right-[445px] text-right">
+      We are in a rapid digital transformation phase <br> where everyone - 'Grocer to Tailor to Hair stylist <br> to
+      MSCEs and Corporates - All shifting to the <br> Digital platform.
+    </p>
+    <img class="absolute top-0 left-0 -z-10 w-full h-[1300px]" src="assets/images/page-4.png" alt="">
+  </div>
+
+
+  <!-- Services -->
+  <div id class="w-full px-12 py-20">
+    <div class="text-left mb-8">
+      <h2 class=" text-2xl md:text-5xl md:text-left text-blue-700 font-bold mb-2 max-md:text-center ">OUR SERVICES</h2>
+      <p class="md:text-2xl text-[1rem] md:w-[950px]  mb-12 break-words leading-relaxed text-justify bold">
+        Unlock Your Business Potential with Our <br class="max-md:hidden"> Range of Solutions
+      </p>
+    </div>
+    <div class="w-full flex flex-col items-center justify-center text-center">
+      <p class="md:text-2xl text-[1rem] md:w-[950px]  mb-12 break-words leading-relaxed text-justify bold">
+        In today's digital data driven economy, when brands are moulded with process automation. 'Data protection'
+        is of paramount importance. avanzo now offers consultancy in Formulating security policies for corporates.
+        Intellectual property rights (IPR) in cyberspace , Cyber forensics, Cyber Legal Audit & 1s Audit for
+        organisations and Security Audit as per ISO standards. Cyber investigation for governments and Case
+        presentation in front of adjudication offers(India Arbitration).
+      </p>
+    </div>
+  </div>
+  <!-- ....clients mobile screen... -->
+   <div class="md:hidden px-12 py-20 bg-primary relative overflow-hidden">
+    <h2 class=" text-2xl md:text-5xl md:text-left text-white font-bold pb-10 max-md:text-center ">OUR CLIENTS</h2>
+    <div class="w-full grid grid-cols-2 gap-8">
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 py-10 rounded-3xl ">
+        <img class="w-[100px] " src="assets/images/01.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 py-10 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/08.png" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/02.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/03.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/04.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/05.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/06.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg p-4 rounded-3xl">
+        <img class="w-[100px]" src="assets/images/07.jpg" alt="">
+      </div>
+    </div>
+   </div>
+
+  <!-- Clients -->
+  <div class="w-full px-12 py-20 bg-primary relative overflow-hidden max-md:hidden">
+    <h2 class=" text-2xl md:text-5xl md:text-left text-white font-bold pb-10 max-md:text-center ">OUR CLIENTS</h2>
+    <div class="w-full grid grid-cols-4 gap-8">
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg  rounded-3xl ">
+        <img class="w-[200px] " src="assets/images/01.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[250px]" src="assets/images/08.png" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/02.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/03.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/04.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/05.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/06.jpg" alt="">
+      </div>
+      <div class="col-span-1 bg-white flex items-center justify-center shadow-lg py-4 rounded-3xl">
+        <img class="w-[200px]" src="assets/images/07.jpg" alt="">
+      </div>
+    </div>
+    <img class="absolute -bottom-[1000px] -right-[500px] z-10" src="assets/images/bg 2.png" alt="">
+  </div>
+<!-- Animated Scrolling Disclaimer Section -->
+<section class="w-full  py-4 flex justify-center items-center animate-pulse overflow-hidden">
+  <div class="whitespace-nowrap overflow-hidden">
+    <p class="text-black font-bold text-xl md:text-8xl lg:text-xl  p-6 rounded-lg  animate-marquee">
+      Disclaimer: * We do not charge for hiring. *
+    </p>
+      </div>
+</section>
+<style>
+@keyframes marquee {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+display: inline-block;
+white-space: nowrap;
+animation: marquee 10s linear infinite;
+}
+  .hero-heading {
+    font-size: 3rem; /* text-5xl equivalent */
+    font-weight: 800; /* font-extrabold equivalent */
+    text-align: center;
+    color: black;
+    z-index: 20;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-heading {
+      font-size: 4.5rem; /* text-7xl equivalent */
+    }
+  }
+  @media (max-width: 768px) {
+    .size{
+      font-size:50px;
+    }
+  }
+</style>
+  <!--Footer Menu  -->
+  <div class="w-full px-12 grid md:grid-cols-2 grid-cols-1 py-12 ">
+    <div class="flex flex-col mb-4">
+      <h2 class="text-2xl font-bold mb-4">Quick Links</h2>
+      <a href="#" class="text-lg hover:text-primary w-fit">Home</a>
+      <a href="#" class="text-lg hover:text-primary w-fit">About</a>
+      <a href="#" class="text-lg hover:text-primary w-fit">Services</a>
+      <a href="#" class="text-lg hover:text-primary w-fit">Contact</a>
+    </div>
+    <div class="flex flex-col ">
+      <h2 class="text-2xl font-bold mb-4">Contact</h2>
+      <p class="text-lg">
+        +91 73561 11128 <br>
+        info@avanzosolutions.in<br>
+        NRA-89,Whitefield,Puthurkkara,<br>
+        Ayyanthole,Thrissur,680003<br>
+      </p>
+    </div>
+  </div>
+  <!-- Copyrights -->
+  <div class="w-full px-12 flex items-center justify-between bg-primary h-16" style="background-color: #004F70;">
+    <p class="text-lg max-md:hidden text-white">&copy;A unit of AVANZO CYBER SECURITY SOLUTIONS PVT. LTD. | Designed by avanzodesign.in</p>
+    <p class="text-sm  md:hidden text-white">&copy;All rights reserved AVANZO</p>
+    <div class="flex gap-3">
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter text-white"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-white"></i></a>
+    </div>
+  </div>
+</body>
+</html>
